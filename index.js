@@ -1,4 +1,4 @@
-const ROOT_API = "http://www.mocky.io/v2/5eb0053d3300002b00c68ae9";
+const ROOT_API = "https://www.mocky.io/v2/5eb0053d3300002b00c68ae9";
 
 const subscribe = async type => {
   const response = await fetch(`${ROOT_API}/${type}`);
