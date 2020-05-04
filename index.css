@@ -85,10 +85,15 @@ body {
   color: var(--color-text);
   font-size: 1.4rem;
   text-transform: capitalize;
+  transition: all 0.2s;
+  cursor: pointer;
 }
-.btn:active,
+.btn:hover {
+  opacity: 0.8;
+}
 .btn:focus {
   outline: none;
+  opacity: 0.8;
 }
 .btn-colored {
   background-color: var(--color-primary);
