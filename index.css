@@ -1,0 +1,117 @@
+:root {
+  --color-primary: #3176ff;
+  --color-secondary: #ebf0fe;
+  --color-text: #616161;
+  --color-dark: #212121;
+}
+*::before,
+*::after {
+  padding: 0;
+  margin: 0;
+}
+html {
+  font-size: 62.5%;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Montserrat", sans-serif;
+  background-color: #183048;
+  background-color: var(--color-secondary);
+}
+.plans {
+  width: 60%;
+  margin: 10rem auto;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  position: relative;
+}
+.pricing__plan {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  box-shadow: 0 1rem 2rem rgba(0, 0, 0, 0.03);
+  border-radius: 6px;
+  padding: 2rem;
+  background-color: #ffffff;
+}
+.pricing__plan-title {
+  font-size: 1.5rem;
+  color: var(--color-dark);
+  text-align: center;
+}
+.pricing__plan-icon {
+  width: 5rem;
+  height: 5rem;
+}
+.pricing__plan-price {
+  display: flex;
+  justify-content: flex-start;
+  text-align: center;
+  align-items: center;
+}
+.pricing__plan-amount {
+  font-size: 2rem;
+  color: var(--color-dark);
+  margin-right: 0.2rem;
+}
+.pricing__plan-duration {
+  font-size: 1.4rem;
+  color: var(--color-text);
+}
+.pricing__plan-text {
+  font-size: 1.5rem;
+  color: var(--color-text);
+  text-align: center;
+}
+.pricing__plan--1 {
+  transform: translateX(1.5rem);
+}
+.pricing__plan--3 {
+  transform: translateX(-1.5rem);
+}
+.pricing__plan--2 {
+  position: relative;
+  z-index: 3;
+  margin: -2rem 0;
+  box-shadow: 0 3px 34px #f5f8ff;
+}
+.btn {
+  padding: 1rem 2rem;
+  border: none;
+  border-radius: 6rem;
+  background-color: var(--color-secondary);
+  color: var(--color-text);
+  font-size: 1.4rem;
+  text-transform: capitalize;
+}
+.btn:active,
+.btn:focus {
+  outline: none;
+}
+.btn-colored {
+  background-color: var(--color-primary);
+  color: #ffffff;
+}
+
+@media only screen and (max-width: 900px) {
+  .plans {
+    width: 80%;
+    margin: 5rem auto;
+    grid-template-columns: 1fr;
+  }
+  .pricing__plan:not(:last-child) {
+    margin-bottom: 1rem;
+  }
+  .pricing__plan--1 {
+    transform: translateX(0);
+  }
+  .pricing__plan--3 {
+    transform: translateX(0);
+  }
+  .pricing__plan--2 {
+    z-index: 0;
+    margin: 0;
+  }
+}
